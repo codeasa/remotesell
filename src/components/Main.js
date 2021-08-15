@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import ReactJson from "react-json-view";
- 
+
 import { Sign } from "./Sign";
 import { Summary } from "./Summary";
 import { Upload } from "./Upload";
@@ -43,6 +43,7 @@ function Main({ screen }) {
         {key[step] === "sign" && <Sign></Sign>}
       </div>
       <div>
+      <ReactJson src={{ meta }} theme="monokai" collapsed="true" />
         <ReactJson src={{ step }} theme="monokai" collapsed="true" />
       </div>
       <div className="w-full flex h-16 bg-black flex-row-reverse">
