@@ -1,7 +1,7 @@
 export const Login = () => {
   return (
     <div className="w-full  place-content-center flex h-full">
-      <form className="p-1">
+      <form className="p-10">
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
