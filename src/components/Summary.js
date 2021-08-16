@@ -8,9 +8,13 @@ export const Summary = ({ content }) => {
     );
   });
   return (
-    <div className="w-full  place-content-center flex h-full p-2 bg-gray-50">
-      <div className="p-2 w-full flex-row  place-content-center max-w-3xl h-100 bg-gray-50 px-1">
-        <div className="text-xl py-5">Summary</div>
+    <div className="w-full    h-full p-10 bg-gray-50">
+      <div className="place-content-center flex-col mb-4">
+        <div className="text-xl mb-4">Policy Summary</div>
+        <p className="py-5 text-sm"></p>
+      </div>
+
+      <div className="mb-6">
         <div className="rounded overflow-hidden shadow-lg p-5">
           <div className="flex-column">{table}</div>
         </div>

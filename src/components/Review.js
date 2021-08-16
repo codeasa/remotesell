@@ -19,7 +19,7 @@ export const Review = ({ docs }) => {
         onClick={() => {
           setNumDoc(k);
         }}
-        className="p-1 m-4 text-white rounded-xl bg-fwd"
+        className="p-1 m-4 w-5 text-white bg-fwd"
       >
         {k + 1}
       </div>

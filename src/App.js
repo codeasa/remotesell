@@ -18,7 +18,7 @@ function App() {
         base: "Set for Health",
       },
       review: ["/plan.pdf", '/sample.pdf'],
-      upload: [],
+      upload: ['ID card front', 'ID card back'],
       sign: {},
     },
   };

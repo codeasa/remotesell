@@ -28,7 +28,7 @@ function Main({ screen, meta }) {
           <Summary content={meta.steps.summary}></Summary>
         )}
         {key[step] === "review" && <Review docs={meta.steps.review}></Review>}
-        {key[step] === "upload" && <Upload></Upload>}
+        {key[step] === "upload" && <Upload files={meta.steps.upload}></Upload>}
         {key[step] === "sign" && <Sign></Sign>}
       </div>
       <div>
