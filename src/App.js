@@ -1,12 +1,12 @@
-import './App.css';
-import { Header } from './components/Header';
-import Main from './components/Main';
- 
+import "./App.css";
+import { Header } from "./components/Header";
+import Main from "./components/Main";
+import "@material-tailwind/react/tailwind.css";
 
 function App() {
   var meta = {
     summary: {
-      policyno: 193402321
+      policyno: 'A102934',
     },
     steps: {
       login: {
