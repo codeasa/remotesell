@@ -17,7 +17,7 @@ function App() {
         suminsured: 100000,
         base: "Set for Health",
       },
-      review: [],
+      review: ["/plan.pdf", '/sample.pdf'],
       upload: [],
       sign: {},
     },

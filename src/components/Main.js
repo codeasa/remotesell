@@ -14,7 +14,6 @@ function Main({ screen, meta }) {
   const [step, setStep] = useState(0);
   useEffect(() => {});
 
-
   const key = Object.keys(meta.steps);
 
   const next = () => {
@@ -23,12 +22,12 @@ function Main({ screen, meta }) {
   };
   return (
     <div className="content">
-      <div className="">
+      <div className="overflow-auto">
         {key[step] === "login" && <Login></Login>}
         {key[step] === "summary" && (
           <Summary content={meta.steps.summary}></Summary>
         )}
-        {key[step] === "review" && <Review></Review>}
+        {key[step] === "review" && <Review docs={meta.steps.review}></Review>}
         {key[step] === "upload" && <Upload></Upload>}
         {key[step] === "sign" && <Sign></Sign>}
       </div>
