@@ -6,19 +6,19 @@ import "@material-tailwind/react/tailwind.css";
 function App() {
   var meta = {
     summary: {
-      policyno: 'A102934',
+      policyno: "A102934",
     },
     steps: {
       login: {
         fields: ["name", "birthday"],
       },
-      summary: {
+      summary: {        
         premium: 10000,
         suminsured: 100000,
         base: "Set for Health",
       },
-      review: ["/plan.pdf", '/sample.pdf'],
-      upload: ['ID card front', 'ID card back'],
+      review: ["/plan.pdf", "/sample.pdf"],
+      upload: ["ID card front", "ID card back"],
       sign: {},
     },
   };

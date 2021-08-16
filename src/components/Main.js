@@ -17,8 +17,7 @@ function Main({ screen, meta }) {
   const key = Object.keys(meta.steps);
 
   const next = () => {
-    setStep(step + 1);
-    console.log(key[step]);
+    setStep(step + 1);    
   };
   return (
     <div className="content">
@@ -40,6 +39,7 @@ function Main({ screen, meta }) {
           className="bg-fwd rounded text-white w-100 px-10 my-2 mx-2 hover:opacity-90"
           onClick={next}
           color="primary"
+          disabled={key[step]===undefined}
         >
           Next
         </button>

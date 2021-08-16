@@ -23,7 +23,8 @@ div {
 #docContainer {
   flex: 1 auto auto;
   background-color: gray;
-  height: 70vh;
+  height: calc(100vh - 240px);
   width: 100vw;
   overflow-y: auto;
+  overflow-x: none;
 }

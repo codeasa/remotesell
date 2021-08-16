@@ -19,7 +19,7 @@ export const Review = ({ docs }) => {
         onClick={() => {
           setNumDoc(k);
         }}
-        className="p-1 m-4 w-5 text-white bg-fwd"
+        className="rounded-full px-2 m-2 bg-fwd"
       >
         {k + 1}
       </div>
@@ -27,8 +27,8 @@ export const Review = ({ docs }) => {
   };
 
   return (
-    <div className="w-full place-content-center   h-100 bg-gray-50 px-1  ">
-      <div className="h-100 bg-gray-50 flex justify-center">{getDocNum()}</div>
+    <div className="w-full place-content-center  bg-gray-50 px-1  ">
+      <div className=" bg-gray-50 flex justify-center">{getDocNum()}</div>
       <div id="docContainer" className="grid justify-items-stretch">
         <div className="justify-self-center">
           <Document
