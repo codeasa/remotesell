@@ -8,23 +8,13 @@ import { Upload } from "./Upload";
 import { Review } from "./Review";
 import { Login } from "./Login";
 
-function Main({ screen }) {
+import { Button } from "@material-ui/core";
+
+function Main({ screen, meta }) {
   const [step, setStep] = useState(0);
   useEffect(() => {});
 
-  var meta = {
-    steps: {
-      login: {
-        fields: ["name", "birthday"],
-      },
 
-      summary: { premium: 10000, suminsured: 100000, base: "Set for Health" },
-
-      review: [],
-      upload: [],
-      sign: {},
-    },
-  };
   const key = Object.keys(meta.steps);
 
   const next = () => {
@@ -43,13 +33,14 @@ function Main({ screen }) {
         {key[step] === "sign" && <Sign></Sign>}
       </div>
       <div>
-      <ReactJson src={{ meta }} theme="monokai" collapsed="true" />
+        <ReactJson src={{ meta }} theme="monokai" collapsed="true" />
         <ReactJson src={{ step }} theme="monokai" collapsed="true" />
       </div>
       <div className="w-full flex h-16 bg-black flex-row-reverse">
         <button
-          className="bg-fwd rounded text-white w-100 px-4 my-2 mx-2 hover:opacity-90"
+          className="bg-fwd rounded text-white w-100 px-10 my-2 mx-2 hover:opacity-90"
           onClick={next}
+          color="primary"
         >
           Next
         </button>

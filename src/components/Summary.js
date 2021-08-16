@@ -8,7 +8,7 @@ export const Summary = ({ content }) => {
     );
   });
   return (
-    <div className="w-full place-content-center h-full p-10">
+    <div className="w-full  place-content-center flex h-full ">
       <h2>Summary</h2>
       <div className="flex-column">{table}</div>
     </div>
