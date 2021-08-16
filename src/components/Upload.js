@@ -1,5 +1,5 @@
 export const Upload = ({ files }) => {
-  const f = files.map((f) => {
+  const getFileList = files.map((f) => {
     return (
       <div className="mb-5">
         <h2>{f}</h2>
@@ -7,7 +7,7 @@ export const Upload = ({ files }) => {
       </div>
     );
   });
-  console.log({ f });
+ 
   return (
     <div className="w-full    h-full p-10 bg-gray-50">
       <div className="place-content-center flex-col mb-4">
@@ -16,7 +16,7 @@ export const Upload = ({ files }) => {
       </div>
 
       <div className="mb-6">
-        <div>{f}</div>
+        <div>{getFileList}</div>
       </div>
     </div>
   );
