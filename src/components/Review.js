@@ -27,23 +27,17 @@ export const Review = ({ docs }) => {
   };
 
   return (
-    <div className="w-full place-content-center  bg-gray-50 px-1  ">
+    <div className="cardContainer">
       <div className=" bg-gray-50 flex justify-center">{getDocNum()}</div>
-      <div id="docContainer" className="grid justify-items-stretch">
-        <div className="justify-self-center">
-          <Document
-            file={process.env.PUBLIC_URL + docs[numDoc]}
-            onLoadSuccess={onDocumentLoadSuccess}
-          >
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page
-                key={`page_${index + 1}`}
-                pageNumber={index + 1}
-                wrap
-              ></Page>
-            ))}
-          </Document>
-        </div>
+      <div className="bg-gray flex justify-center">
+        <Document
+          file={process.env.PUBLIC_URL + docs[numDoc]}
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
+          {Array.from(new Array(numPages), (el, index) => (
+            <Page key={`page_${index + 1}`} pageNumber={index + 1} wrap></Page>
+          ))}
+        </Document>
       </div>
     </div>
   );

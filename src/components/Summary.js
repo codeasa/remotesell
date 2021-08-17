@@ -8,10 +8,10 @@ export const Summary = ({ content }) => {
     );
   });
   return (
-    <div className="w-full h-full p-10 bg-gray-50">
-      <div className="place-content-center flex-col mb-4">
-        <div className="text-xl mb-4">Policy Summary</div>
-        <p className="py-5 text-sm"></p>
+    <div className="cardContainer">
+      <div>
+        <div className="title">Summary</div>
+        <p className="description"></p>
       </div>
 
       <div className="mb-6">

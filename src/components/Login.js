@@ -4,7 +4,6 @@ import Button from "@material-ui/core/Button";
 import styled from "styled-components";
 
 export const Login = ({ fields }) => {
- 
   const showFields = fields.map((field) => {
     return (
       <div className="mb-4">
@@ -14,10 +13,10 @@ export const Login = ({ fields }) => {
   });
 
   return (
-    <div className="w-full h-full p-10 bg-gray-50">
-      <div className="place-content-center flex-col mb-4">
-        <div className="text-xl mb-4">Remote Authentication</div>
-        <p className="py-5 text-sm">
+    <div className="cardContainer">
+      <div>
+        <div className="title">Remote Authentication</div>
+        <p className="description">
           Please enter your Date of Birth, and the last 4 characters of
           ID/Passport number:
         </p>

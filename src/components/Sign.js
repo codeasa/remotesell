@@ -2,15 +2,19 @@ import SignatureCanvas from "react-signature-canvas";
 
 export const Sign = () => {
   return (
-    <div className="w-full    h-full p-10 bg-gray-50">
-      <div className="place-content-center flex-col mb-4">
-        <div className="text-xl mb-4">Signature</div>
-        <p className="py-5 text-sm"></p>
+    <div className="cardContainer">
+      <div>
+        <div className="title">Signature</div>
+        <p className="description"></p>
       </div>
-      <div className="mb-6 bg-white">
+      <div className="bg-gray flex justify-center" >
         <SignatureCanvas
           penColor="gray"
-          canvasProps={{ width: 500, height: 200, className: "sigCanvas" }}
+          canvasProps={{
+            width: 400,
+            height: 300,
+            className: "bg-white",
+          }}
         />
       </div>
     </div>
