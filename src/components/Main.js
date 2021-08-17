@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import ReactJson from "react-json-view";
 
 import { Sign } from "./Sign";
@@ -8,21 +7,17 @@ import { Upload } from "./Upload";
 import { Review } from "./Review";
 import { Login } from "./Login";
 
-import { Button } from "@material-ui/core";
-
 function Main({ screen, meta }) {
-  const [step, setStep] = useState(0);
   useEffect(() => {});
 
+  const [step, setStep] = useState(0);
   const key = Object.keys(meta.steps);
+  const next = () => setStep(step + 1);
 
-  const next = () => {
-    setStep(step + 1);    
-  };
   return (
     <div className="content">
-      <div className="overflow-auto">
-        {key[step] === "login" && <Login></Login>}
+      <div>
+        {key[step] === "login" && <Login fields={meta.steps.login}></Login>}
         {key[step] === "summary" && (
           <Summary content={meta.steps.summary}></Summary>
         )}
@@ -36,10 +31,10 @@ function Main({ screen, meta }) {
       </div>
       <div className="w-full flex h-16 bg-black flex-row-reverse">
         <button
-          className="bg-fwd rounded text-white w-100 px-10 my-2 mx-2 hover:opacity-90"
+          className="bg-fwd rounded text-white w-100 px-10 m-2 hover:opacity-90"
           onClick={next}
           color="primary"
-          disabled={key[step]===undefined}
+          disabled={key[step] === undefined}
         >
           Next
         </button>

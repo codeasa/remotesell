@@ -9,9 +9,7 @@ function App() {
       policyno: "A102934",
     },
     steps: {
-      login: {
-        fields: ["name", "birthday"],
-      },
+      login: ["name", "birthday"],    
       summary: {        
         premium: 10000,
         suminsured: 100000,
