@@ -18,11 +18,12 @@ function Main({ screen, meta }) {
     <div className="content">
       <div>
         {key[step] === "login" && <Login fields={meta.steps.login}></Login>}
-        {key[step] === "summary" && (
+        {key[step]=== "summary" && (
           <Summary content={meta.steps.summary}></Summary>
         )}
-        {key[step] === "review" && <Review docs={meta.steps.review}></Review>}
+        {key[step]=== "review" && <Review docs={meta.steps.review}></Review>}
         {key[step] === "upload" && <Upload files={meta.steps.upload}></Upload>}
+        {key[step] === "upload_2" && <Upload files={meta.steps.upload_2}></Upload>}
         {key[step] === "sign" && <Sign></Sign>}
       </div>
       <div>

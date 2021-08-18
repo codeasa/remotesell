@@ -3,7 +3,8 @@ export const Upload = ({ files }) => {
     return (
       <div className="mb-2">
         <h2>{f}</h2>
-        <input type="file" />
+        
+        <input type="file" accept="image/*" capture="user"></input>
       </div>
     );
   });
