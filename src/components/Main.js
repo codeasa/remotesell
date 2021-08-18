@@ -6,6 +6,7 @@ import { Summary } from "./Summary";
 import { Upload } from "./Upload";
 import { Review } from "./Review";
 import { Login } from "./Login";
+import Selfie from "./Selfie";
 
 function Main({ screen, meta }) {
   useEffect(() => {});
@@ -23,8 +24,8 @@ function Main({ screen, meta }) {
         )}
         {key[step] === "review" && <Review docs={meta.steps.review}></Review>}
         {key[step] === "upload" && <Upload files={meta.steps.upload}></Upload>}
-        {key[step] === "upload_2" && (
-          <Upload files={meta.steps.upload_2}></Upload>
+        {key[step] === "selfie" && (
+          <Selfie></Selfie>
         )}
         {key[step] === "sign" && <Sign></Sign>}
         {!key[step] && (

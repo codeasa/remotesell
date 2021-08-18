@@ -14,7 +14,7 @@ function App() {
           },
           steps: {
             login: ["name", "birthday"],
-            review: ["/leaflet.pdf"],
+            review: ["/proposal.pdf"],
           },
         }
       : {
@@ -28,9 +28,9 @@ function App() {
               suminsured: 100000,
               base: "Set for Health",
             },
-            review: ["/plan.pdf", "/sample.pdf"],
+            review: ["/appform.pdf", "/pdp.pdf"],
             upload: ["ID card front", "ID card back"],
-            upload_2: ["Selfie"],
+            selfie: ["Selfie"],
             sign: {},
           },
         };
