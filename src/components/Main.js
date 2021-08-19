@@ -7,6 +7,7 @@ import { Upload } from "./Upload";
 import { Review } from "./Review";
 import { Login } from "./Login";
 import Selfie from "./Selfie";
+import {OTP} from "./OTP";
 
 function Main({ screen, meta }) {
   useEffect(() => {});
@@ -24,10 +25,9 @@ function Main({ screen, meta }) {
         )}
         {key[step] === "review" && <Review docs={meta.steps.review}></Review>}
         {key[step] === "upload" && <Upload files={meta.steps.upload}></Upload>}
-        {key[step] === "selfie" && (
-          <Selfie></Selfie>
-        )}
+        {key[step] === "selfie" && <Selfie></Selfie>}
         {key[step] === "sign" && <Sign></Sign>}
+        {key[step] === "otp" && <OTP></OTP>}
         {!key[step] && (
           <div className="flex justify-center">
             <div>Complete</div>

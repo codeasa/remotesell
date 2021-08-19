@@ -30,6 +30,7 @@ function App() {
             },
             review: ["/appform.pdf", "/pdp.pdf"],
             upload: ["ID card front", "ID card back"],
+            otp:{},
             selfie: ["Selfie"],
             sign: {},
           },
