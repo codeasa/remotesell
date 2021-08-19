@@ -63,7 +63,7 @@ export const Review = (ref) => {
               key={`page_${index + 1}`}
               pageNumber={index + 1}
               wrap
-              width={document.documentElement.clientWidth - 80}
+              width={document.documentElement.clientWidth - 100}
             ></Page>
           ))}
         </Document>
