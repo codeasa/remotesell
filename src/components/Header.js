@@ -4,7 +4,7 @@ export const Header = ({ summary }) => {
     <div className="bg-fwd  ">
       <div className="h-20 px-4 py-4 flex justify-between">
         <img src={logo} className="h-full" alt=""></img>
-        <h1 className="px-10 text-xl">
+        <h1 className="px-10 text-2xl">
           {summary.policyno ? "Confirm Application" : "Review SI"}
         </h1>
 
