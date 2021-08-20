@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Compressor from "compressorjs";
 
 function Selfie() {
-  const [compressedFile, setCompressedFile] = useState(null);
   const [img, setImg] = useState({
     originalImage: null,
     compressedImage: null,
@@ -21,9 +20,6 @@ function Selfie() {
     new Compressor(image, {
       quality: 0.6, // 0.6 can also be used, but its not recommended to go below.
       success: (res) => {
-        // compressedResult has the compressed file.
-        // Use the compressed file to upload the images to your server.
-        setCompressedFile(res);
         setImg({
           originalImage: URL.createObjectURL(image),
           compressedImage: URL.createObjectURL(res),
@@ -42,6 +38,7 @@ function Selfie() {
       <div className="flex justify-content">
         <button className="w-40 border-2 flex justify-center">
           <img
+            alt=""
             src={process.env.PUBLIC_URL + "/selfie.png"}
             onClick={() => {
               document.getElementById("capture").click();
@@ -51,9 +48,9 @@ function Selfie() {
       </div>
       {img.compressedImage&&<div className="border-2">
         <h2>Original {img.originalSize}</h2>
-        <img src={img.originalImage} className="w-100 border-red-200 h-200" />
+        <img src={img.originalImage} className="w-100 border-red-200 h-200" alt=""/>
         <h2>Compressed {img.compressedSize}</h2>
-        <img src={img.compressedImage} className="w-100 border-red-200 h-200" />
+        <img src={img.compressedImage} className="w-100 border-red-200 h-200" alt=""/>
       </div>}
       <div className="hidden">
         <div>

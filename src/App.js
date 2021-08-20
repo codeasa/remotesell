@@ -7,7 +7,7 @@ function App() {
   //const token = require('query-string').parse(window.location.search)?.token;
   const token = window.location?.hash;
   var meta =
-    token == "#si"
+    token === "#si"
       ? {
           summary: {
             refid: "A102934",

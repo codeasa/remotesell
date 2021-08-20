@@ -9,9 +9,6 @@ export const Review = (ref) => {
   console.log('%c'+ref, 'color:green')
   const [numDoc, setNumDoc] = useState(0);
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  const pdfWrapper = useRef(null);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -24,7 +21,7 @@ export const Review = (ref) => {
           setNumDoc(k);
         }}
         className={
-          k == numDoc
+          k === numDoc
             ? "rounded-full px-2 m-2 bg-fwd"
             : "rounded-full px-2 m-2 text-fwd bg-white"
         }
