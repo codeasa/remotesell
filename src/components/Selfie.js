@@ -7,7 +7,7 @@ function Selfie() {
     originalImage: null,
     compressedImage: null,
     originalSize: 0,
-    compressedSize: 0
+    compressedSize: 0,
   });
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function Selfie() {
 
   const handleCompressedUpload = (e) => {
     const image = e.target.files[0];
-    console.log({image});
+    console.log({ image });
 
     new Compressor(image, {
       quality: 0.6, // 0.6 can also be used, but its not recommended to go below.
@@ -28,7 +28,7 @@ function Selfie() {
           originalImage: URL.createObjectURL(image),
           compressedImage: URL.createObjectURL(res),
           originalSize: image.size,
-          compressedSize: res.size
+          compressedSize: res.size,
         });
       },
     });
@@ -49,12 +49,12 @@ function Selfie() {
           ></img>
         </button>
       </div>
-      <div className="border-2">
+      {img.compressedImage&&<div className="border-2">
         <h2>Original {img.originalSize}</h2>
         <img src={img.originalImage} className="w-100 border-red-200 h-200" />
         <h2>Compressed {img.compressedSize}</h2>
         <img src={img.compressedImage} className="w-100 border-red-200 h-200" />
-      </div>
+      </div>}
       <div className="hidden">
         <div>
           <input
