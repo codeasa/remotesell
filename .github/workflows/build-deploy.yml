@@ -34,7 +34,7 @@ jobs:
     
     - name: Deploy project
       run: |
-        cd $PUBLISH_DIR
+        cd build
         git init
         git config --local user.name $USER_NAME
         git config --local user.email $USER_EMAIL
