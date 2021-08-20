@@ -36,5 +36,5 @@ jobs:
     if: github.ref == 'refs/heads/main'
     
     steps:
-    - name: Deploy to gh-pages
-      uses: yarn deploy
+    - name: Build project
+      run: yarn deploy
