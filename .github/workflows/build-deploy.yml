@@ -34,7 +34,6 @@ jobs:
     
     - name: Deploy project
       run: |
-      git config --local user.name $USER_NAME
-      git config --local user.email $USER_EMAIL
-      yarn deploy
-  
+        git config --local user.name $USER_NAME
+        git config --local user.email $USER_EMAIL
+        yarn deploy
