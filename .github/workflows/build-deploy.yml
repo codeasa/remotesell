@@ -11,6 +11,10 @@ on:
 jobs:
   build:
     name: Build
+    env:
+      MY_SECRET   : ${{secrets.commit_secret}}
+      USER_NAME   : codeasa
+      USER_EMAIL  : code@asachoi.com      
     runs-on: ubuntu-latest
     
     steps:
@@ -29,5 +33,8 @@ jobs:
       run: yarn build
     
     - name: Deploy project
-      run: yarn deploy
+      run: |
+      git config --local user.name $USER_NAME
+      git config --local user.email $USER_EMAIL
+      yarn deploy
   
