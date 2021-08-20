@@ -49,7 +49,7 @@ function Selfie() {
           ></img>
         </button>
       </div>
-      <div className="flex">
+      <div className="border-2">
         <h2>Original {img.originalSize}</h2>
         <img src={img.originalImage} className="w-100 border-red-200 h-200" />
         <h2>Compressed {img.compressedSize}</h2>
