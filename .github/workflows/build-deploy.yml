@@ -28,13 +28,6 @@ jobs:
     - name: Build project
       run: yarn build
     
-  
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    
-    steps:
-    - name: Build project
+    - name: Deploy project
       run: yarn deploy
+  
