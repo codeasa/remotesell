@@ -1,12 +1,9 @@
 export const OTP = () => {
   const getOTP = () => (
-    <div className="">
-      <input className="w-8 m-2" />
-      <input className="w-8 m-2" />
-      <input className="w-8 m-2" />
-      <input className="w-8 m-2" />
-      <input className="w-8 m-2" />
-      <input className="w-8 m-2" />
+    <div class="mb-6 text-center">
+      <div id="otp" class="flex justify-center">
+        <input type="text" id="field-name" name="field-name" maxlength="4" />
+      </div>
     </div>
   );
   return (

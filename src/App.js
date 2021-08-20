@@ -23,15 +23,10 @@ function App() {
           },
           steps: {
             login: ["name", "birthday"],
-            summary: {
-              premium: 10000,
-              suminsured: 100000,
-              base: "Set for Health",
-            },
-            review: ["/appform.pdf", "/pdp.pdf"],
             upload: ["ID card front", "ID card back"],
-            otp:{},
             selfie: ["Selfie"],
+            otp:{},
+            review: ["/appform.pdf", "/pdp.pdf"],
             sign: {},
           },
         };
