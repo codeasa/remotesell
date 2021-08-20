@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState} from "react";
 import { Document, Page } from "react-pdf";
 
 import { pdfjs } from "react-pdf";
@@ -6,7 +6,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 export const Review = (ref) => {
   const docs = ref.docs;
-  console.log('%c'+ref, 'color:green')
+  
   const [numDoc, setNumDoc] = useState(0);
   const [numPages, setNumPages] = useState(null);
 
