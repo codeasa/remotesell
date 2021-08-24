@@ -25,6 +25,7 @@ function App() {
             login: ["name", "birthday"],
             upload: ["ID card front", "ID card back"],
             selfie: ["Selfie"],
+            declaration: {},
             otp:{},
             review: ["/appform.pdf", "/pdp.pdf"],
             sign: {},
