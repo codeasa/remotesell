@@ -1,11 +1,5 @@
 export const OTP = () => {
-  const getOTP = () => (
-    <div className="mb-6 text-center">
-      <div id="otp" className="flex justify-center">
-        <input type="text" id="field-name" name="field-name" maxlength="4" />
-      </div>
-    </div>
-  );
+ 
   return (
     <div className="cardContainer  ">
       <div className="container mx-auto">
