@@ -16,7 +16,7 @@ export const Upload = ({ files }) => {
           <div className="w-full">
             <div className="bg-white h-full py-3 rounded text-center">
               <h1 className="text-2xl font-bold">File Upload</h1>
-  
+
               <div>{getFileList}</div>
             </div>
           </div>

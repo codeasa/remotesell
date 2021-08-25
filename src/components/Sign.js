@@ -1,7 +1,6 @@
 import SignatureCanvas from "react-signature-canvas";
 
 export const Sign = ({ roles }) => {
-
   const signBoard = (role) => {
     return (
       <div>

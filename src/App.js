@@ -21,6 +21,17 @@ function App() {
               type: "review",
               data: ["/proposal.pdf"],
             },
+            {
+              type: "review",
+              data: ["/proposal.pdf"],
+            },
+            {
+              type: "review",
+              data: ["/proposal.pdf"],
+            },
+            {
+              type: "completed",
+            },
           ],
         }
       : {
@@ -53,6 +64,9 @@ function App() {
             {
               type: "sign",
               data: ["po", "insured"],
+            },
+            {
+              type: "completed",
             },
           ],
         };
