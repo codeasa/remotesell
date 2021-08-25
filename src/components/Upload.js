@@ -3,7 +3,7 @@ export const Upload = ({ files }) => {
     const roleList = files.map((r) => {
       return (
         <div>
-          <h1  className="p-5 text-xl">{r.role}</h1>
+          <h1  className="p-5 text-xl bold">{r.role}</h1>
           {r.content.map((f) => (
             <div className="mb-2">
               <h2>{f}</h2>
