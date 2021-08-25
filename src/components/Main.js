@@ -14,7 +14,7 @@ function Main({ screen, meta }) {
   useEffect(() => {});
 
   const [step, setStep] = useState(0);
-  const key = Object.keys(meta.steps);
+
   const next = () => setStep(step + 1);
 
   return (

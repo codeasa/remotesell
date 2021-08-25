@@ -55,7 +55,7 @@ export const OTP = () => {
               </div>
               <div className="flex justify-center text-center mt-5">
                 {" "}
-                <a className="flex items-center text-blue-700 hover:text-blue-900 cursor-pointer">
+                <a className="flex items-center text-blue-700 hover:text-blue-900 cursor-pointer" href="">
                   <span className="font-bold">Resend OTP</span>
                   <i className="bx bx-caret-right ml-1"></i>
                 </a>{" "}
