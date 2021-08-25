@@ -33,7 +33,7 @@ function Main({ screen, meta }) {
           <Upload files={meta.steps[step].data}></Upload>
         )}
         {meta.steps[step].type === "selfie" && <Selfie></Selfie>}
-        {meta.steps[step].type === "sign" && <Sign></Sign>}
+        {meta.steps[step].type === "sign" && <Sign  roles={meta.steps[step].data}></Sign>}
         {meta.steps[step].type === "declaration" && <Declaration></Declaration>}
         {meta.steps[step].type === "otp" && <OTP></OTP>}
         {!meta.steps[step].type && (

@@ -37,20 +37,22 @@ function App() {
               data: ["ID card front", "ID card back"],
             },
             {
-              type: "Selfie",
-              data: ["ID card front", "ID card back"],
+              type: "selfie",
             },
             {
               type: "declaration",
               data: ["ID card front", "ID card back"],
             },
             {
-              type: "otp",
+              type: "review",
               data: ["/appform.pdf", "/pdp.pdf"],
             },
             {
+              type: "otp",
+            },
+            {
               type: "sign",
-              data: ["ID card front", "ID card back"],
+              data: ["po", "insured"],
             },
           ],
         };
