@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Document, Page } from "react-pdf";
 
 import { pdfjs } from "react-pdf";
@@ -6,7 +6,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 export const Review = (ref) => {
   const docs = ref.docs;
-  
+
   const [numDoc, setNumDoc] = useState(0);
   const [numPages, setNumPages] = useState(null);
 
@@ -33,7 +33,7 @@ export const Review = (ref) => {
 
   return (
     <div className="cardContainer">
-            <div className="">
+      <div className="">
         <div className="title">Review Documents</div>
         <p className="description w-full"></p>
       </div>
@@ -68,6 +68,14 @@ export const Review = (ref) => {
             ></Page>
           ))}
         </Document>
+      </div>
+      <div className="flex justify-end mt-4">
+        <label className="flex items-center">
+          <input type="checkbox" className="form-checkbox fwd" />
+          <span className="ml-2">
+            I confirm I have read the document
+          </span>
+        </label>
       </div>
     </div>
   );

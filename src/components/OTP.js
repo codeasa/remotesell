@@ -1,5 +1,4 @@
 export const OTP = () => {
- 
   return (
     <div className="cardContainer  ">
       <div className="container mx-auto">
