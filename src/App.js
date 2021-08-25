@@ -45,14 +45,16 @@ function App() {
             },
             {
               type: "upload",
-              data: ["ID card front", "ID card back"],
+              data: [
+                { role: "PO", content: ["ID card front", "ID card back"] },
+                { role: "insured", content: ["driving license"] },
+              ],
             },
             {
               type: "selfie",
             },
             {
               type: "declaration",
-              data: ["ID card front", "ID card back"],
             },
             {
               type: "review",
