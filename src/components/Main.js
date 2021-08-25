@@ -7,8 +7,8 @@ import { Upload } from "./Upload";
 import { Review } from "./Review";
 import { Login } from "./Login";
 import Selfie from "./Selfie";
-import {OTP} from "./OTP";
-import {Declaration} from "./Declaration";
+import { OTP } from "./OTP";
+import { Declaration } from "./Declaration";
 
 function Main({ screen, meta }) {
   useEffect(() => {});
@@ -20,17 +20,23 @@ function Main({ screen, meta }) {
   return (
     <div className="content">
       <div>
-        {key[step] === "login" && <Login fields={meta.steps.login}></Login>}
-        {key[step] === "summary" && (
-          <Summary content={meta.steps.summary}></Summary>
+        {meta.steps[step].type === "login" && (
+          <Login fields={meta.steps[step].data}></Login>
         )}
-        {key[step] === "review" && <Review docs={meta.steps.review}></Review>}
-        {key[step] === "upload" && <Upload files={meta.steps.upload}></Upload>}
-        {key[step] === "selfie" && <Selfie></Selfie>}
-        {key[step] === "sign" && <Sign></Sign>}
-        {key[step] === "declaration" && <Declaration></Declaration>}
-        {key[step] === "otp" && <OTP></OTP>}
-        {!key[step] && (
+        {meta.steps[step].type === "summary" && (
+          <Summary content={meta.steps[step].data}></Summary>
+        )}
+        {meta.steps[step].type === "review" && (
+          <Review docs={meta.steps[step].data}></Review>
+        )}
+        {meta.steps[step].type === "upload" && (
+          <Upload files={meta.steps[step].data}></Upload>
+        )}
+        {meta.steps[step].type === "selfie" && <Selfie></Selfie>}
+        {meta.steps[step].type === "sign" && <Sign></Sign>}
+        {meta.steps[step].type === "declaration" && <Declaration></Declaration>}
+        {meta.steps[step].type === "otp" && <OTP></OTP>}
+        {!meta.steps[step].type && (
           <div className="flex justify-center">
             <div>Complete</div>
           </div>
@@ -45,7 +51,7 @@ function Main({ screen, meta }) {
           className="bg-fwd rounded text-white w-100 px-10 m-2 hover:opacity-90"
           onClick={next}
           color="primary"
-          disabled={key[step] === undefined}
+          disabled={meta.steps[step].type === undefined}
         >
           Confirm
         </button>

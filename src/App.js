@@ -12,24 +12,47 @@ function App() {
           summary: {
             refid: "A102934",
           },
-          steps: {
-            login: ["name", "birthday"],
-            review: ["/proposal.pdf"],
-          },
+          steps: [
+            {
+              type: "login",
+              data: ["name", "birthday"],
+            },
+            {
+              type: "review",
+              data: ["/proposal.pdf"],
+            },
+          ],
         }
       : {
           summary: {
             policyno: "A102934",
           },
-          steps: {
-            login: ["name", "birthday"],
-            upload: ["ID card front", "ID card back"],
-            selfie: ["Selfie"],
-            declaration: {},
-            otp:{},
-            review: ["/appform.pdf", "/pdp.pdf"],
-            sign: {},
-          },
+          steps: [
+            {
+              type: "login",
+              data: ["name", "birthday"],
+            },
+            {
+              type: "upload",
+              data: ["ID card front", "ID card back"],
+            },
+            {
+              type: "Selfie",
+              data: ["ID card front", "ID card back"],
+            },
+            {
+              type: "declaration",
+              data: ["ID card front", "ID card back"],
+            },
+            {
+              type: "otp",
+              data: ["/appform.pdf", "/pdp.pdf"],
+            },
+            {
+              type: "sign",
+              data: ["ID card front", "ID card back"],
+            },
+          ],
         };
   return (
     <div className="app">
